@@ -11,13 +11,13 @@ export function App() {
 
   const onLeaveFeedback = option => {
     switch (option) {
-      case 'good':
+      case 'Good':
         setGood(good => good + 1);
         break;
-      case 'neutral':
+      case 'Neutral':
         setNeutral(neutral => neutral + 1);
         break;
-      case 'bad':
+      case 'Bad':
         setBad(bad => bad + 1);
         break;
 
@@ -36,7 +36,7 @@ export function App() {
     return percentage;
   }
 
-  const optionName = ['good', 'neutral', 'bad'];
+  const optionName = ['Good', 'Neutral', 'Bad'];
   const value = countTotalFeedback();
   const percent = countPositiveFeedbackPercentage();
 
@@ -52,8 +52,7 @@ export function App() {
         color: '#010101',
       }}
     >
-      <h1>Please leave feedback</h1>
-
+   
       <Section title="Please leave feedback">
         <FeedbackOptions
           options={optionName}
